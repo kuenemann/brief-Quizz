@@ -1,0 +1,227 @@
+$tamagotchi-bg-color: #f5f5f5;
+$tamagotchi-bar-height: 30px;
+$tamagotchi-bar-border-radius: $tamagotchi-bar-height / 2;
+$tamagotchi-bar-margin: 10px;
+
+
+* {
+    margin: 0;
+    padding:0;
+  }
+
+  .page-accueil {
+    background-image: url(/inc/img/elden-ring-illustration-chateau.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.input_pseudo {
+    margin-bottom: 20px;
+  
+    input {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: 2px solid #ffca6d;
+      color: #fff;
+      background-color: #3c3c3c;
+      text-shadow: 1px 1px #000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+      &::placeholder {
+        color: #aaa;
+        text-shadow: none;
+      }
+  
+      &:focus {
+        outline: none;
+        border-color: #ffca6d;
+        box-shadow: 0 0 6px #ffca6d;
+      }
+    }
+  
+    .container-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #ffca6d;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+  
+        &:hover {
+          background-color: #ffc04f;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+  
+        &:active {
+          transform: translateY(1px);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .choix-personnage {
+    position: absolute;
+    top: calc(50% + 70px); /* ajuster la position verticale */
+    width: 100%; /* prendre toute la largeur */
+    height: 300px; /* ajuster selon la taille de l'image */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* ajouter la propriété z-index */
+  }
+  
+  .personnage1 {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px; /* ajuster la taille de l'image */
+    height: 400px; /* ajuster la taille de l'image */
+    background-image: url("/inc/img/Chevalier-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .personnage2 {
+    right: 50%;
+    transform: translateX(50%);
+    width: 200px; /* ajuster la taille de l'image */
+    height: 300px; /* ajuster la taille de l'image */
+    background-image: url("/inc/img/Chevalier-1-505x750-removebg-preview.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  
+  
+  
+
+
+  
+  
+
+  
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .tamagotchi-container {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bar {
+    height: 5%;
+    background-color: white;
+    margin: 5%;
+    border-radius: 10px;
+    position: relative;
+  
+    span {
+      position: absolute;
+      left: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .progress {
+      height: 100%;
+      background-color: dodgerblue;
+      border-radius: 10px;
+      transition: width 0.2s ease-out;
+    }
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  
+    button {
+      margin: 0 5%;
+      padding: 2% 5%;
+      border-radius: 10px;
+      border: none;
+      background-color: dodgerblue;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease-out;
+  
+      &:hover {
+        transform: scale(1.1);
+      }
+  
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .tamagotchi-container {
+      padding: 10px;
+      border-radius: 10px;
+    }
+  
+    .bar {
+      height: 10%;
+      margin: 10px;
+    }
+  
+    .buttons-container {
+      flex-wrap: wrap;
+  
+      button {
+        margin: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+      }
+    }
+  }
+   */

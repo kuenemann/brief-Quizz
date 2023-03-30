@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/inc/style/style.scss">
+    <title>tamagochi</title>
+</head>
+
+<body>
+    <main>
+
+        <!-- Première page Question -->
+
+        <section>
+         <div class="page-accueil">
+            <div class="container-accueil">
+                <div class="input_pseudo">
+                    <input id="input_pseudo" type="text" placeholder="Saisir votre prénom...">
+                    <div class="container-button">
+                        <button id="button-start">Start</button>
+                    </div>
+                </div>
+                <div class="choix-personnage">
+                    <div class="personnage1"></div>
+                    <div class="personnage2"></div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- deuxieme page -->
+
+        <section>
+            <div class="tamagotchi-container">
+                <h1>Tamagotchi - Chevalier</h1>
+                <div class="status"></div>
+                <div class="bars-container">
+                    <div class="health-bar bar">
+                        <span>Vie</span>
+                        <div class="progress"></div>
+                    </div>
+                    <div class="strength-bar bar">
+                        <span>Force</span>
+                        <div class="progress"></div>
+                    </div>
+                    <div class="mana-bar bar">
+                        <span>Mana</span>
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                <div class="buttons-container">
+                    <button class="heal-button">Soigner</button>
+                    <button class="recharge-button">Recharger</button>
+                    <button class="rest-button">Reposer</button>
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+    <script src="/inc/ts/script.ts"></script>
+</body>
+
+</html>
