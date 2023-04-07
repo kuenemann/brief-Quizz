@@ -2,66 +2,118 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/inc/style/style.scss">
-    <title>tamagochi</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/inc/style/style.scss">
+  <title>tamagochi</title>
 </head>
 
 <body>
-    <main>
+  <main>
 
-        <!-- Première page Question -->
+    <!-- Première page Question -->
 
-        <section>
-         <div class="page-accueil">
-            <div class="container-accueil">
-                <div class="input_pseudo">
-                    <input id="input_pseudo" type="text" placeholder="Saisir votre prénom...">
-                    <div class="container-button">
-                        <button id="button-start">Start</button>
-                    </div>
-                </div>
-                <div class="choix-personnage">
-                    <div class="personnage1"></div>
-                    <div class="personnage2"></div>
-                </div>
+    <section class="section1">
+      <div class="page-accueil">
+        <div class="container-accueil">
+          <div class="input_pseudo">
+            <input id="input_pseudo" type="text" placeholder="Saisir votre prénom...">
+            <div class="container-button">
             </div>
+          </div>
+          <div class="choix-personnage">
+            <div class="container_personnage1">
+              <img class="Chevalier personnage1" src="./inc/img/Chevalier-1-505x750-removebg-preview.png"
+                alt="Chevalier">
             </div>
-        </section>
-
-        <!-- deuxieme page -->
-
-        <section>
-            <div class="tamagotchi-container">
-                <h1>Tamagotchi - Chevalier</h1>
-                <div class="status"></div>
-                <div class="bars-container">
-                    <div class="health-bar bar">
-                        <span>Vie</span>
-                        <div class="progress"></div>
-                    </div>
-                    <div class="strength-bar bar">
-                        <span>Force</span>
-                        <div class="progress"></div>
-                    </div>
-                    <div class="mana-bar bar">
-                        <span>Mana</span>
-                        <div class="progress"></div>
-                    </div>
-                </div>
-                <div class="buttons-container">
-                    <button class="heal-button">Soigner</button>
-                    <button class="recharge-button">Recharger</button>
-                    <button class="rest-button">Reposer</button>
-                </div>
+            <div class="container_personnage2">
+              <img class="Magicien personnage2" src="./inc/img/Wizard-5e-removebg-preview.png" alt="Magicien">
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-       
-    </main>
-    <script src="/inc/ts/script.ts"></script>
+    <!-- deuxieme page -->
+
+    <section class="section2 hide">
+      <div class="container2">
+        <div class="character-container">
+          <img class="character" src="./inc/img/Chevalier-1-505x750-removebg-preview.png" alt="Chevalier">
+        </div>
+        <div class="command-container">
+          <h2>Commandes :</h2>
+          <input type="text" id="command-input" placeholder="Tapez votre commande ici...">
+          <button id="command-button">Envoyer</button>
+        </div>
+      </div>
+      <div class="stats-container">
+        <div class="stat">
+          <p>Points de vie :</p>
+          <button id="barre-vie" class="santé-button">+</button>
+          <div class="health-bar">
+            <div id="chevalier-health-bar-fill" class="health-bar-fill"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <p>Faim :</p>
+          <button id="barre-faim" class="santé-button">+</button>
+          <div class="hunger-bar">
+            <div id="chevalier-hunger-bar-fill" class="hunger-bar-fill"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <p>Joie :</p>
+          <button id="barre-joie" class="santé-button">+</button>
+          <div class="happiness-bar">
+            <div id="chevalier-happiness-bar-fill" class="happiness-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- troisieme page -->
+    <section class="section3 hide">
+      <div class="container3">
+        <div class="character-container">
+          <img class="character" src="/inc/img/Wizard-5e-removebg-preview.png" alt="Chevalier">
+        </div>
+        <div class="command-container">
+          <h2>Commandes :</h2>
+          <input type="text" id="command-input" placeholder="Tapez votre commande ici...">
+          <button id="command-button">Envoyer</button>
+        </div>
+      </div>
+      <div class="stats-container">
+        <div class="stat">
+          <p>Points de vie :</p>
+          <button id="magicien-barre-vie" class="santé-button">+</button>
+          <div class="health-bar">
+            <div id="magicien-health-bar-fill" class="health-bar-fill"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <p>Faim :</p>
+          <button id="magicien-barre-faim" class="santé-button">+</button>
+          <div class="hunger-bar">
+            <div id="magicien-hunger-bar-fill" class="hunger-bar-fill"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <p>Joie :</p>
+          <button id="magicien-barre-joie" class="santé-button">+</button>
+          <div class="happiness-bar">
+            <div id="magicien-happiness-bar-fill" class="happiness-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <script src="./inc/ts/script.ts"></script>
 </body>
 
 </html>

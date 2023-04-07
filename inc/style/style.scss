@@ -5,223 +5,316 @@ $tamagotchi-bar-margin: 10px;
 
 
 * {
-    margin: 0;
-    padding:0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  .page-accueil {
-    background-image: url(/inc/img/elden-ring-illustration-chateau.jpeg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
+
+
+.page-accueil {
+  background-image: url(/inc/img/elden-ring-illustration-chateau.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
 }
 
 .input_pseudo {
-    margin-bottom: 20px;
-  
-    input {
-      width: 100%;
-      max-width: 400px;
-      padding: 10px;
-      font-size: 18px;
-      border-radius: 5px;
-      border: 2px solid #ffca6d;
-      color: #fff;
-      background-color: #3c3c3c;
-      text-shadow: 1px 1px #000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  
-      &::placeholder {
-        color: #aaa;
-        text-shadow: none;
-      }
-  
-      &:focus {
-        outline: none;
-        border-color: #ffca6d;
-        box-shadow: 0 0 6px #ffca6d;
-      }
-    }
-  
-    .container-button {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-  
-      button {
-        padding: 10px 20px;
-        font-size: 18px;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #fff;
-        background-color: #ffca6d;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-  
-        &:hover {
-          background-color: #ffc04f;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-  
-        &:active {
-          transform: translateY(1px);
-          box-shadow: none;
-        }
-      }
-    }
-  }
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 
-  .choix-personnage {
-    position: absolute;
-    top: calc(50% + 70px); /* ajuster la position verticale */
-    width: 100%; /* prendre toute la largeur */
-    height: 300px; /* ajuster selon la taille de l'image */
-    display: flex;
-    justify-content: space-between;
+  input {
     align-items: center;
-    z-index: 1; /* ajouter la propriété z-index */
-  }
-  
-  .personnage1 {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px; /* ajuster la taille de l'image */
-    height: 400px; /* ajuster la taille de l'image */
-    background-image: url("/inc/img/Chevalier-2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  
-  .personnage2 {
-    right: 50%;
-    transform: translateX(50%);
-    width: 200px; /* ajuster la taille de l'image */
-    height: 300px; /* ajuster la taille de l'image */
-    background-image: url("/inc/img/Chevalier-1-505x750-removebg-preview.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+    max-width: 400px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #ffca6d;
+    color: #fff;
+    background-color: #3c3c3c;
+    text-shadow: 1px 1px #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-  
-  
-  
-
-
-  
-  
-
-  
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .tamagotchi-container {
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #F0F0F0;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .bar {
-    height: 5%;
-    background-color: white;
-    margin: 5%;
-    border-radius: 10px;
-    position: relative;
-  
-    span {
-      position: absolute;
-      left: 5%;
-      top: 50%;
-      transform: translateY(-50%);
+    &::placeholder {
+      color: #aaa;
+      text-shadow: none;
     }
-  
-    .progress {
-      height: 100%;
-      background-color: dodgerblue;
-      border-radius: 10px;
-      transition: width 0.2s ease-out;
+
+    &:focus {
+      outline: none;
+      border-color: #ffca6d;
+      box-shadow: 0 0 6px #ffca6d;
     }
   }
-  
-  .buttons-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
-  
-    button {
-      margin: 0 5%;
-      padding: 2% 5%;
-      border-radius: 10px;
-      border: none;
-      background-color: dodgerblue;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: transform 0.2s ease-out;
-  
-      &:hover {
-        transform: scale(1.1);
-      }
-  
-      &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-      }
-    }
+}
+
+
+
+.choix-personnage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
   }
-  
-  @media screen and (max-width: 768px) {
-    .tamagotchi-container {
-      padding: 10px;
-      border-radius: 10px;
-    }
-  
-    .bar {
-      height: 10%;
-      margin: 10px;
-    }
-  
-    .buttons-container {
-      flex-wrap: wrap;
-  
-      button {
-        margin: 5px;
-        padding: 5px 10px;
-        font-size: 14px;
-      }
-    }
+}
+
+.container_personnage1,
+.container_personnage2 {
+  margin: 0 20px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  @media only screen and (max-width: 768px) {
+    margin: 20px 0;
   }
-   */
+}
+
+.Chevalier,
+.Magicien {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  border: 2px solid transparent;
+
+  @media only screen and (max-width: 768px) {
+    width: 150px;
+    height: 225px;
+  }
+}
+
+.container_personnage1:hover .Chevalier,
+.container_personnage2:hover .Magicien {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  border-color: #d1a146;
+}
+
+.container_personnage1:hover::before,
+.container_personnage2:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.8);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.container_personnage1:hover::before {
+  opacity: 1;
+  background-color: #d1a146;
+}
+
+.container_personnage2:hover::before {
+  opacity: 1;
+  background-color: #6f95e1;
+}
+
+
+
+/* Section 2 */
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(/inc/img/370533-sepik.jpg);
+  background-attachment: fixed;
+  height: 100vh;
+  justify-content: center;
+  background-size: cover;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(/inc/img/370533-sepik.jpg);
+  background-attachment: fixed;
+  height: 100vh;
+  justify-content: center;
+  background-size: cover;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.container3 {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.character-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character {
+  max-width: 100%;
+  height: auto;
+}
+
+.command-container {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#command-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  font-size: 1rem;
+
+}
+
+#command-button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  background-color: #ffd3b6;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#command-button:hover {
+  background-color: #ffcda3;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.stat {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.santé-button {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  background-color: #ffd3b6;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.santé-button:hover {
+  background-color: #ffcda3;
+}
+
+.health-bar,
+.level-bar,
+.hunger-bar,
+.happiness-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.health-bar-fill {
+  height: 100%;
+  width: 100%;
+  background-color: #ff5757;
+}
+
+.level-bar-fill {
+  height: 100%;
+  background-color: #4bc0c0;
+}
+
+.hunger-bar-fill {
+  height: 100%;
+  background-color: #ffd777;
+}
+
+.happiness-bar-fill {
+  height: 100%;
+  background-color: #f1c232;
+}
+
+.hide {
+  display: none;
+}
+
+/* bouton cacher */
+
+bouton {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+
